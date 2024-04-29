@@ -14,3 +14,7 @@
     font-weight: 500;
     margin: 0.5rem 0;
 }
+
+.active{
+    color: rgb(254, 140, 242);
+}

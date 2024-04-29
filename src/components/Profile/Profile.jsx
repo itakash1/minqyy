@@ -6,23 +6,27 @@ export default function Profile() {
     return(
         <div className="profile">
             <div className="profile-header">
-                <div>
+                <div className="profile-title">
                     <img className='avatar' src={avatar} alt=""/>
-                    <img className='banner'src={banner} alt=""/>
+                    <div>
+                        <h1 className="name">
+                            <span>Nikolay Malikov</span>
+                        </h1>
+                        <p className="status">
+                            <span>Write some about ur</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img className='banner' src={banner} alt=""/>
                 </div>
             </div>
 
-            <div className="profile-data">
-                <div className="profile-title">
-                    <h1 className="name">
-                        <span>Nikolay Malikov</span>
-                    </h1>
-                    <p className="status">
-                        <span>Write some about ur</span>
-                    </p>
-                </div>
-            </div>
             <div className="profile-wall">
+                <div className="inputVoid">
+                    <input type="text" placeholder="What do u think about z1trxks?"/>
+                    <button>Send</button>
+                </div>
                 <div className="post">
                     <div className="title-post">
                         <div className='avatar-user-post'>

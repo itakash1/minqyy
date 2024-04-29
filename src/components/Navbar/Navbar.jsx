@@ -4,16 +4,16 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div>
-                <a href="#">Profile</a>
+                <a className="active" href="#">Profile</a>
             </div>
             <div>
-                <a href="#">Chats</a>
+                <a className="" href="#">Chats</a>
             </div>
             <div>
-                <a href="#">Music</a>
+                <a className="" href="#">Music</a>
             </div>
             <div>
-                <a href="#">News</a>
+                <a className="" href="#">News</a>
             </div>
         </nav>
     );
