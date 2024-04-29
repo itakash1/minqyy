@@ -1,18 +1,74 @@
 .profile{
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
 }
-.banner{
-    width: 100%;
-    height: 250px;
-}
 .avatar{
     position: absolute;
+    width: 150px;
+    top: 10rem;
+    left: 10rem;
+    border-radius: 50%;
+    box-shadow: #1a1a1a 0px 0px 25px;
+}
+.banner{
+    width: 100%;
+    height: 300px;
+}
+.profile-data{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.name{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.status{
+    font-size: 1.5rem;
+}
+.status span{
+    color: pink;
+}
+.profile-wall{
+    border-top: rgb(254, 140, 242) solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    border: rgb(254, 140, 242) solid 2px;
+    border-radius: 15px;
+    min-height: 100px;
+    width: 800px;
+    margin: 3rem auto;
+    gap: 5rem;
+}
+.title-post{
+    display: flex;
+    align-items: center;
+    border-right: 1px solid gray;
+    box-shadow: gray 1px 0 5px;
+    height: 100%;
+}
+.avatar-user-post img{
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: #1a1a1a 0 0 25px;
+    height: 75px;
+    width: 75px;
+}
+.name-user-post{
+    display: flex;
     width: 100px;
 }
 
-.profile-data{
+.data-post{
     display: flex;
     width: 100%;
 }
