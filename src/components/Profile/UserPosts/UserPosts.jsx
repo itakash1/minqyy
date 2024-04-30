@@ -6,8 +6,8 @@ export default function UserPosts() {
     return (
         <div className={css.wall__post__void}>
             <UserInput />
-            <Post />
-            <Post />
+            <Post text={'Im so lazy... But im gtg teach React!'}/>
+            <Post text={'"cya" - Its one of the way variants say goodbye in English language'}/>
         </div>
     );
 }

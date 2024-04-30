@@ -1,7 +1,7 @@
 import css from './Post.module.css';
 import avatar from "../../../../assets/avatar.jpeg";
 
-export default function Post() {
+export default function Post(props) {
     return (
         <div className={css.user__post}>
             <div className={css.user__post_title}>
@@ -13,7 +13,7 @@ export default function Post() {
                 </div>
             </div>
             <div className={css.user__post_data}>
-                <p>Im so lazy... But im gtg teach React!</p>
+                <p>{props.text}</p>
             </div>
         </div>
     );
