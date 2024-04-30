@@ -1,9 +1,10 @@
-.profile_wall{
+.wall__post__void{
     border-top: rgb(254, 140, 242) solid 1px;
     display: flex;
     flex-direction: column;
 }
-.post{
+
+.input__void{
     display: flex;
     align-items: center;
     font-size: 1.2rem;
@@ -14,13 +15,43 @@
     margin: 3rem auto;
     gap: 5rem;
 }
-.title_post{
+
+.input__void textarea{
+    background-color: rgba(254, 140, 242, 0);
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 2rem;
+    resize: none;
+}
+
+.input__void button{
+    background-color: rgba(141, 141, 141, 0);
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid gray;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.user__post{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    border: rgb(254, 140, 242) solid 2px;
+    border-radius: 15px;
+    min-height: 100px;
+    width: 800px;
+    margin: 3rem auto;
+    gap: 5rem;
+}
+.user__post_title{
     display: flex;
     align-items: center;
     border-right: 1px solid gray;
-    height: 100%;
+    min-height: 100px;
 }
-.avatar_user_post img{
+.user__post_avatar img{
     margin: 0.5rem;
     display: flex;
     align-items: center;
@@ -29,39 +60,12 @@
     height: 75px;
     width: 75px;
 }
-.name_user_post{
+.user__post_name{
     display: flex;
     width: 100px;
 }
 
-.data_post{
+.user__post_data{
     display: flex;
     width: 100%;
-}
-
-.input_void{
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    border: rgb(254, 140, 242) solid 2px;
-    border-radius: 15px;
-    min-height: 100px;
-    width: 800px;
-    margin: 3rem auto;
-    gap: 5rem;
-}
-
-.input_void input{
-    background-color: rgba(254, 140, 242, 0);
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    padding: 2rem;
-}
-
-.input_void button{
-    background-color: rgba(141, 141, 141, 0);
-    width: 20%;
-    height: 100%;
-    border-left: 1px solid gray;
 }
