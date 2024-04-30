@@ -1,4 +1,4 @@
-import './Profile.css'
+import css from './Profile.module.css'
 import avatar from '../../assets/avatar.jpeg'
 import banner from '../../assets/banner.jpeg'
 
@@ -36,7 +36,7 @@ export default function Profile() {
                             <span>Nikolay Malikov</span>
                         </div>
                     </div>
-                    <div className='data-post'>
+                    <div className={css.data_post}>
                         <p>Im so lazy... But im gtg teach React!</p>
                     </div>
                 </div>

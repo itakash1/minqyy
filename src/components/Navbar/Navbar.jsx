@@ -1,20 +1,12 @@
-import './Navbar.css'
+import css from'./Navbar.module.css'
 
 export default function Navbar() {
     return (
-        <nav className="navbar">
-            <div>
-                <a className="active" href="#">Profile</a>
-            </div>
-            <div>
-                <a className="" href="#">Chats</a>
-            </div>
-            <div>
-                <a className="" href="#">Music</a>
-            </div>
-            <div>
-                <a className="" href="#">News</a>
-            </div>
+        <nav className={css.navbar}>
+                <a className={css.item} href="#">Profile</a>
+                <a className={css.item} href="#">Chats</a>
+                <a className={css.item} href="#">Music</a>
+                <a className={css.item} href="#">News</a>
         </nav>
     );
 }

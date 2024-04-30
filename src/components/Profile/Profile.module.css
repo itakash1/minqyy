@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 100%;
 }
-.profile-title{
+.profile_title{
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -40,7 +40,7 @@
 
 
 
-.profile-wall{
+.profile_wall{
     border-top: rgb(254, 140, 242) solid 1px;
     display: flex;
     flex-direction: column;
@@ -56,13 +56,13 @@
     margin: 3rem auto;
     gap: 5rem;
 }
-.title-post{
+.title_post{
     display: flex;
     align-items: center;
     border-right: 1px solid gray;
     height: 100%;
 }
-.avatar-user-post img{
+.avatar_user_post img{
     margin: 0.5rem;
     display: flex;
     align-items: center;
@@ -71,17 +71,17 @@
     height: 75px;
     width: 75px;
 }
-.name-user-post{
+.name_user_post{
     display: flex;
     width: 100px;
 }
 
-.data-post{
+.data_post{
     display: flex;
     width: 100%;
 }
 
-.inputVoid{
+.input_void{
     display: flex;
     align-items: center;
     font-size: 1.2rem;
@@ -93,7 +93,7 @@
     gap: 5rem;
 }
 
-.inputVoid input{
+.input_void input{
     background-color: rgba(254, 140, 242, 0);
     width: 100%;
     height: 100%;
@@ -101,7 +101,7 @@
     padding: 2rem;
 }
 
-.inputVoid button{
+.input_void button{
     background-color: rgba(141, 141, 141, 0);
     width: 20%;
     height: 100%;
