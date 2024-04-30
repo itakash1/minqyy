@@ -1,0 +1,29 @@
+.input__void{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    border: rgb(254, 140, 242) solid 2px;
+    border-radius: 15px;
+    min-height: 100px;
+    width: 800px;
+    margin: 3rem auto;
+    gap: 5rem;
+}
+
+.input__void textarea{
+    background-color: rgba(254, 140, 242, 0);
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 2rem;
+    resize: none;
+}
+
+.input__void button{
+    background-color: rgba(141, 141, 141, 0);
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid gray;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
