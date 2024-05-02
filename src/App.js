@@ -2,19 +2,19 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
 
 function App() {
-  return (
-    <div className="container">
-        <Header />
-      <body>
-        <div className="page">
-            <Navbar />
-            <Profile />
+    return (
+        <div className="container">
+            <Header/>
+            <div className="page">
+                <Navbar/>
+                {/*<Profile />*/}
+                <Dialogs/>
+            </div>
         </div>
-      </body>
-    </div>
-  );
+    );
 }
 
 export default App;

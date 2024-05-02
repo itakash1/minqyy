@@ -1,0 +1,90 @@
+.dialogs{
+    display: flex;
+    width: 100%;
+}
+
+.dialogs_nav{
+    width: 25%;
+}
+
+.dialogs_chat{
+    width: 75%;
+}
+
+.chat_user{
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(242, 195, 255, 0.25) 0 2px 5px;
+}
+
+.chat_user p{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.chat_user img{
+    margin: 0.4rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: rgba(242, 195, 255, 0.25);
+}
+
+
+.input__void{
+    background-color: rgb(56, 56, 56);
+    position: fixed;
+    bottom: 1rem;
+    right: 22rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    border: rgb(254, 140, 242) solid 2px;
+    border-radius: 15px;
+    min-height: 100px;
+    width: 800px;
+    margin: 3rem auto;
+    gap: 5rem;
+}
+
+.input__void textarea{
+    background-color: rgba(254, 140, 242, 0);
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 2rem;
+    resize: none;
+}
+
+.input__void button{
+    background-color: rgba(141, 141, 141, 0);
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid gray;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.chat_void{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg_user{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    border-radius: 15px;
+    border: 2px solid black;
+    min-height: 50px;
+}
