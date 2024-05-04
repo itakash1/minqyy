@@ -1,5 +1,5 @@
 import css from './Post.module.css';
-import avatar from "../../../../assets/avatar.jpeg";
+import avatar from "../../../../../assets/avatar.jpeg";
 
 export default function Post(props) {
     return (

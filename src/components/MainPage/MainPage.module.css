@@ -1,0 +1,6 @@
+.page{
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    border-right: 1px solid rgb(254, 140, 242);
+}

@@ -1,6 +1,6 @@
 import css from './Profile.module.css'
-import avatar from '../../assets/avatar.jpeg'
-import banner from '../../assets/banner.jpg'
+import avatar from '../../../assets/avatar.jpeg'
+import banner from '../../../assets/banner.jpg'
 import UserPosts from './UserPosts/UserPosts'
 
 export default function Profile() {

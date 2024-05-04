@@ -1,7 +1,7 @@
 import css from './Dialogs.module.css';
-import avatar from "../../assets/user-avatar.png";
+import avatar from "../../../assets/user-avatar.png";
 
-export default function Dialogs(){
+export default function Dialogs(props){
     return(
         <div className={css.dialogs}>
 
