@@ -7,8 +7,8 @@ export default function Navbar() {
         <nav className={`${css.navbar}`}>
                 <NavLink className={activeTagName} to="/profile">Profile</NavLink>
                 <NavLink className={activeTagName} to="/dialogs">Chats</NavLink>
-                <NavLink className={css.item} to="#">Music</NavLink>
-                <NavLink className={css.item} to="#">News</NavLink>
+                <NavLink className={activeTagName} to="/music">Music</NavLink>
+                <NavLink className={activeTagName} to="/news">News</NavLink>
         </nav>
     );
 }
