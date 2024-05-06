@@ -3,12 +3,9 @@
     width: 100%;
 }
 
-.dialogs_nav{
+.dialogs_users_nav{
     width: 25%;
-}
-
-.dialogs_chat{
-    width: 75%;
+    border-right: 2px solid gray;
 }
 
 .chat_user{
@@ -36,52 +33,55 @@
     background-color: rgba(242, 195, 255, 0.25);
 }
 
-
-.input__void{
-    background-color: rgb(56, 56, 56);
+.dialog_chat_void{
     display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    border: rgb(254, 140, 242) solid 2px;
-    border-radius: 15px;
-    max-height: 100px;
-    width: 100%;
-    margin: 3rem auto;
-    gap: 5rem;
-}
-
-.input__void textarea{
-    background-color: rgba(254, 140, 242, 0);
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    padding: 2rem;
-    resize: none;
-}
-
-.input__void button{
-    background-color: rgba(141, 141, 141, 0);
-    width: 20%;
-    height: 100%;
-    border-left: 1px solid gray;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.chat_void{
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    width: 100%;
 }
 
-.msg_user{
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+.dialog_msg_void{
+    width: 90%;
+    font-size: 1.3rem;
+    margin: 0 auto;
+}
+
+.dialog_msg_void p {
+    border: gray solid 1px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.dialog_input_void{
+    display: flex;
+    align-items: end;
+    margin: 2rem auto;
+    width: 75%;
+}
+
+.chat_input{
+    display: flex;
+    justify-content: end;
+    border: 2px solid rgb(254, 140, 242);
+    border-radius: 15px;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+}
+.chat_input textarea{
+    width: 100%;
+    background-color: rgba(254, 140, 242, 0);
+    resize: none;
+    padding: 1rem;
+}
+
+.chat_input button{
+    margin: 1rem;
     display: flex;
     align-items: center;
-    background-color: gray;
-    border-radius: 15px;
-    border: 2px solid black;
-    min-height: 50px;
+    justify-content: end;
+    background-color: rgba(254, 140, 242, 0);
+    border: none;
+    font-size: 1.2rem;
 }

@@ -5,33 +5,36 @@ export default function Dialogs(props){
     return(
         <div className={css.dialogs}>
 
-            <div className={css.dialogs_nav}>
+            <div className={css.dialogs_users_nav}>
                 <div className={`${css.chat_user} ${css.active}`}>
                     <img src={avatar} alt=""/>
                     <p>Никита Турбонадув</p>
                 </div>
                 <div className={css.chat_user}>
                     <img src={avatar} alt=""/>
-                    <p>Никита Турбонадув</p>
+                    <p>Дмитрий Чехословакия</p>
                 </div>
                 <div className={css.chat_user}>
                     <img src={avatar} alt=""/>
-                    <p>Никита Турбонадув</p>
+                    <p>Константин Коленвал</p>
                 </div>
             </div>
 
-            <div className={css.dialogs_chat}>
-                <div className={css.chat_void}>
-                    <div className={css.msg_user}>
-                        <p>msg1</p>
-                    </div>
+            <div className={css.dialog_chat_void}>
 
-                    <div className={css.msg_user}>
-                        <p>msg2</p>
-                    </div>
+                <div className={css.dialog_msg_void}>
+                    <p>
+                        Бассуха лупит - пизда
+                    </p>
 
-                    <div className={css.input__void}>
-                        <textarea placeholder=". . ."/>
+                    <p>
+                        и тормозам кстати тоже пизда
+                    </p>
+                </div>
+
+                <div className={css.dialog_input_void}>
+                    <div className={css.chat_input}>
+                        <textarea name="" id=""></textarea>
                         <button>Send</button>
                     </div>
                 </div>
