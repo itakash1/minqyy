@@ -1,0 +1,12 @@
+.dialog_msg_void{
+    width: 90%;
+    font-size: 1.3rem;
+    margin: 0 auto;
+}
+
+.dialog_msg_void p {
+    border: gray solid 1px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}

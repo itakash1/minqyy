@@ -1,0 +1,32 @@
+.dialogs_users_nav{
+    width: 25%;
+    border-right: 2px solid gray;
+}
+
+.chat_user{
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(242, 195, 255, 0.25) 0 2px 1px;
+    gap: 0.5rem;
+}
+
+.chat_user p{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.chat_user img{
+    margin: 0.4rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: rgba(242, 195, 255, 0.25);
+}
+
+

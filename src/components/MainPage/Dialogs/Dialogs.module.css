@@ -3,54 +3,11 @@
     width: 100%;
 }
 
-.dialogs_users_nav{
-    width: 25%;
-    border-right: 2px solid gray;
-}
-
-.chat_user{
-    display: flex;
-    align-items: center;
-    box-shadow: rgba(242, 195, 255, 0.25) 0 2px 5px;
-}
-
-.chat_user p{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
-.chat_user img{
-    margin: 0.4rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.active{
-    background-color: rgba(242, 195, 255, 0.25);
-}
-
 .dialog_chat_void{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-}
-
-.dialog_msg_void{
-    width: 90%;
-    font-size: 1.3rem;
-    margin: 0 auto;
-}
-
-.dialog_msg_void p {
-    border: gray solid 1px;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
 }
 
 .dialog_input_void{
