@@ -1,7 +1,9 @@
 .dialog_msg_void{
+    display: flex;
     width: 90%;
     font-size: 1.3rem;
     margin: 0 auto;
+    position: relative;
 }
 
 .dialog_msg_void p {
