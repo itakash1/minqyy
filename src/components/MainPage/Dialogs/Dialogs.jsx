@@ -3,33 +3,38 @@ import Users from "./Users/Users";
 import Messagease from "./Messagease/Messagease";
 import avatar from "../../../assets/user-avatar.png";
 
-export default function Dialogs(props){
-    let arrayUsers = [
+export default function Dialogs(props) {
+
+    let listUsers = [
         {id: 1, name: "Андрюха Лупатый", avatar: avatar,},
         {id: 2, name: "Николай Турбо", avatar: avatar,},
         {id: 3, name: "Карась Фандю", avatar: avatar,},
         {id: 4, name: "Дмитрий Бычок", avatar: avatar,},
     ]
 
-    let msgData = [
+    let dialogsData = [
         {id: 1, msg: "hello",},
-        {id: 1, msg: "budlo",},
-        {id: 1, msg: "ya tut",},
-        {id: 1, msg: "poshli v dotu",},
+        {id: 2, msg: "budlo",},
+        {id: 3, msg: "ya tut",},
+        {id: 4, msg: "poshli v dotu",},
     ]
-    return(
+
+    let dialogsEl = listUsers.map((dialog) => {
+        return <Users name={dialog.name} avatar={dialog.avatar} id={dialog.id} />
+    })
+
+    let listUserMsg = dialogsData.map(item => {
+        return <Messagease msg={item.msg}/>
+    })
+
+
+    return (
         <div className={css.dialogs}>
             <div className={css.dialogs_users_nav}>
-                <Users name={arrayUsers[0].name} avatar={arrayUsers[0].avatar} id={arrayUsers[0].id}/>
-                <Users name={arrayUsers[1].name} avatar={arrayUsers[1].avatar} id={arrayUsers[1].id}/>
-                <Users name={arrayUsers[2].name} avatar={arrayUsers[2].avatar} id={arrayUsers[2].id}/>
-                <Users name={arrayUsers[3].name} avatar={arrayUsers[3].avatar} id={arrayUsers[3].id}/>
+                { dialogsEl }
             </div>
             <div className={css.dialog_chat_void}>
-                <Messagease msg={msgData[0].msg}/>
-                <Messagease msg={msgData[1].msg}/>
-                <Messagease msg={msgData[2].msg}/>
-
+                { listUserMsg}
                 <div className={css.dialog_free_void}>
 
                 </div>
