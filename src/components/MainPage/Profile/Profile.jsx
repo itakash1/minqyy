@@ -3,7 +3,7 @@ import avatar from '../../../assets/avatar.jpeg'
 import banner from '../../../assets/banner.jpg'
 import UserPosts from './UserPosts/UserPosts'
 
-export default function Profile() {
+export default function Profile(props) {
     return(
         <div className={css.profile}>
             <div className={css.profile__header}>
@@ -20,7 +20,7 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
-            <UserPosts/>
+            <UserPosts post={props.post} />
         </div>
     );
 }

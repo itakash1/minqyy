@@ -12,8 +12,8 @@ export default function MainPage(props) {
             <Navbar/>
 
             <Routes>
-                <Route path="/profile" element={<Profile/>}/>
-                <Route path="/dialogs/*" element={<Dialogs/>}/>
+                <Route path="/profile" element={<Profile post={props.post}/>}/>
+                <Route path="/dialogs/*" element={<Dialogs listUsers={props.listUsers} dialogsData={props.dialogsData}/>}/>
                 <Route path="/music" element={<Music/>}/>
                 <Route path="/news" element={<News/>}/>
             </Routes>
