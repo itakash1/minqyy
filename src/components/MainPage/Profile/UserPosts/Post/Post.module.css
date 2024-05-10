@@ -33,3 +33,19 @@
     display: flex;
     width: 100%;
 }
+
+.likes{
+    min-width: max-content;
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
+.likes p{
+    display: block;
+}
+
+.likes span{
+    display: inline;
+    color: rgb(254, 140, 242);
+    font-weight: 500;
+}

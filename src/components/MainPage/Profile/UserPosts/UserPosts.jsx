@@ -5,13 +5,13 @@ import UserInput from "./UserInput/UserInput";
 export default function UserPosts(props) {
 
     let userPostWall = props.post.map((el) => {
-        return <Post text={el.text}/>
+        return <Post avatar={el.avatar} text={el.text} likes={el.likes}/>
     })
 
     return (
         <div className={css.wall__post__void}>
             <UserInput />
-            {userPostWall}
+            { userPostWall }
         </div>
     );
 }

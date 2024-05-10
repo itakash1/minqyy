@@ -1,6 +1,7 @@
 import css from './Dialogs.module.css';
 import Users from "./Users/Users";
 import Messagease from "./Messagease/Messagease";
+import InputMsg from "./InputMsg/InputMsg";
 
 export default function Dialogs(props) {
 
@@ -21,16 +22,10 @@ export default function Dialogs(props) {
             </div>
             <div className={css.dialog_chat_void}>
                 { listUserMsg}
-                <div className={css.dialog_free_void}>
 
-                </div>
+                <div className={css.dialog_free_void}></div>
 
-                <div className={css.dialog_input_void}>
-                    <div className={css.chat_input}>
-                        <textarea name="" id=""></textarea>
-                        <button>Send</button>
-                    </div>
-                </div>
+                <InputMsg />
             </div>
         </div>
     );
