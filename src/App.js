@@ -8,7 +8,7 @@ function App(props) {
         <div className="container">
             <BrowserRouter>
                 <Header />
-                <MainPage post={props.post} listUsers={props.listUsers} dialogsData={props.dialogsData} />
+                <MainPage state={props.stateData} />
             </BrowserRouter>
         </div>
     );

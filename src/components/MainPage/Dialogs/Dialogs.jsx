@@ -6,11 +6,11 @@ import InputMsg from "./InputMsg/InputMsg";
 export default function Dialogs(props) {
 
 
-    let dialogsEl = props.listUsers.map((dialog) => {
+    let dialogsEl = props.state.listUsers.map((dialog) => {
         return <Users name={dialog.name} avatar={dialog.avatar} id={dialog.id} />
     })
 
-    let listUserMsg = props.dialogsData.map(item => {
+    let listUserMsg = props.state.dialogsData.map(item => {
         return <Messagease msg={item.msg}/>
     })
 
