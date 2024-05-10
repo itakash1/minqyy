@@ -14,12 +14,6 @@
     width: 100%;
 }
 
-.dialog_input_void{
-    display: flex;
-    margin: 2rem auto;
-    width: 75%;
-}
-
 .dialog_free_void{
     display: flex;
     justify-content: end;

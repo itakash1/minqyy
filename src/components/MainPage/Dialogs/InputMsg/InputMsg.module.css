@@ -23,3 +23,9 @@
     border: none;
     font-size: 1.2rem;
 }
+
+.dialog_input_void{
+    display: flex;
+    margin: 2rem auto;
+    width: 75%;
+}
