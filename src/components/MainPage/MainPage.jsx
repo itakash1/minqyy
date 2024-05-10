@@ -12,7 +12,7 @@ export default function MainPage(props) {
             <Navbar/>
 
             <Routes>
-                <Route path="/profile" element={<Profile state={props.stateData.profile}/>}/>
+                <Route path="/profile" element={<Profile state={props.state.profile}/>}/>
                 <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogs}/>}/>
                 <Route path="/music" element={<Music/>}/>
                 <Route path="/news" element={<News/>}/>

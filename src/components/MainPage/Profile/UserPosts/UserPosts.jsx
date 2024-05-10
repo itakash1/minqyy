@@ -4,7 +4,7 @@ import UserInput from "./UserInput/UserInput";
 
 export default function UserPosts(props) {
 
-    let userPostWall = props.post.map((el) => {
+    let userPostWall = props.state.map((el) => {
         return <Post avatar={el.avatar} text={el.text} likes={el.likes}/>
     })
 

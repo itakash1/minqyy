@@ -20,7 +20,7 @@ export default function Profile(props) {
                     </div>
                 </div>
             </div>
-            <UserPosts state={props.stateData.profile.post} />
+            <UserPosts state={props.state.post} />
         </div>
     );
 }
