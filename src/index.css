@@ -23,4 +23,18 @@ body{
     background-color: #1a1a1a;
 }
 
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #050c26; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 3px solid #050c26; /* Оформление границ бегунка */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');

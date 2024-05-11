@@ -4,10 +4,10 @@ import avatar1 from "../assets/user-avatar.png"
 let state = {
     profile: {
         post: [
-    {id: 1, avatar: avatar, text: 'Im so lazy... But im gtg teach React!', likes: 12,},
-    {id: 2, avatar: avatar, text: '"cya" - Its one of the way variants say goodbye in English language', likes: 2,},
-    {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
-],
+            {id: 1, avatar: avatar, text: 'Im so lazy... But im gtg teach React!', likes: 12,},
+            {id: 2, avatar: avatar, text: '"cya" - Its one of the way variants say goodbye in English language', likes: 2,},
+            {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
+        ],
     },
 
     dialogs: {
@@ -21,6 +21,18 @@ let state = {
             {id: 1, msg: "hello",},
             {id: 2, msg: "budlo",},
             {id: 3, msg: "ya tut",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
+            {id: 4, msg: "poshli v dotu",},
             {id: 4, msg: "poshli v dotu",},
         ],
     },

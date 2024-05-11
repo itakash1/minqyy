@@ -2,4 +2,19 @@
     border-top: rgb(254, 140, 242) solid 1px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+}
+
+.wall__post__void::-webkit-scrollbar {
+    width: 10px; /* Ширина всего элемента навигации */
+}
+
+.wall__post__void::-webkit-scrollbar-track {
+    background: rgba(1, 1, 1, 0.2); /* Цвет дорожки */
+}
+
+.wall__post__void::-webkit-scrollbar-thumb {
+    background-color: gray; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 2px solid gray; /* Оформление границ бегунка */
 }
