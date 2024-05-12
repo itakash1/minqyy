@@ -8,7 +8,7 @@ function App(props) {
         <div className="container">
             <BrowserRouter>
                 <Header />
-                <MainPage state={props.state} />
+                <MainPage state={props.state} addPost={props.addPost}/>
             </BrowserRouter>
         </div>
     );

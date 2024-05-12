@@ -1,10 +1,11 @@
 import css from './UserInput.module.css'
 import React from 'react'
 
-export default function UserInput() {
+export default function UserInput(props) {
     let Test = () => {
         let text = newElement.current.value;
-        alert(text);
+        props.addPost(text)
+        console.log(props.addPost)
     }
 
     let newElement = React.createRef();

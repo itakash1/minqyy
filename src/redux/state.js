@@ -1,5 +1,19 @@
 import avatar from "../assets/avatar.jpeg";
 import avatar1 from "../assets/user-avatar.png"
+import {renderTree} from '../render'
+
+export let addPost = (postMsg) => {
+    let newPost = {
+        id: 5,
+        avatar: avatar,
+        text: postMsg,
+        likes: 5,
+    };
+
+    state.profile.post.push(newPost);
+    renderTree(state);
+}
+
 
 let state = {
     profile: {

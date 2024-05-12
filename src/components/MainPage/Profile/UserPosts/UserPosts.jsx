@@ -10,7 +10,7 @@ export default function UserPosts(props) {
 
     return (
         <div className={css.wall__post__void}>
-            <UserInput />
+            <UserInput addPost={props.addPost}/>
             { userPostWall }
         </div>
     );
