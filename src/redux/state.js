@@ -11,9 +11,14 @@ export let addPost = (postMsg) => {
     };
 
     state.profile.post.push(newPost);
+    state.profile.newText = ''
     renderTree(state);
 }
 
+export let changeNewText = (newText) => {
+    state.profile.newText = newText
+    renderTree(state);
+}
 
 let state = {
     profile: {
@@ -22,6 +27,7 @@ let state = {
             {id: 2, avatar: avatar, text: '"cya" - Its one of the way variants say goodbye in English language', likes: 2,},
             {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
         ],
+        newText: 'hello world!',
     },
 
     dialogs: {
