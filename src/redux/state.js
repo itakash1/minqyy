@@ -1,8 +1,9 @@
 import avatar from "../assets/avatar.jpeg";
 import avatar1 from "../assets/user-avatar.png"
-import {renderTree} from '../render'
+import {renderTree} from "../index";
 
-export let addPost = (postMsg) => {
+
+export const addPost = (postMsg) => {
     let newPost = {
         id: 5,
         avatar: avatar,
@@ -15,11 +16,14 @@ export let addPost = (postMsg) => {
     renderTree(state);
 }
 
-export let changeNewText = (newText) => {
+export const changeNewText = (newText) => {
     state.profile.newText = newText
     renderTree(state);
 }
 
+export const subscribe = (observer) => {
+    renderTree = observer
+}
 let state = {
     profile: {
         post: [
