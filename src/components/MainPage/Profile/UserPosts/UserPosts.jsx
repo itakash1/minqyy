@@ -9,7 +9,7 @@ export default function UserPosts(props) {
 
     return (
         <div className={css.wall__post__void}>
-            <UserInput newText={props.state.newText} dispatch={props.dispatch}/>
+            <UserInput newText={props.state} dispatch={props.dispatch}/>
             { userPostWall }
         </div>
     );

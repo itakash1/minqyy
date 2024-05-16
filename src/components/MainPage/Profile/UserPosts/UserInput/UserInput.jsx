@@ -15,7 +15,7 @@ export default function UserInput(props) {
     let newElement = React.createRef();
     return (
         <div className={css.input__void}>
-            <textarea ref={newElement} placeholder="What do u think about z1trxks?" value={props.newText} onChange={test} />
+            <textarea ref={newElement} placeholder="What do u think about z1trxks?" value={props.newText.profile.newText} onChange={test} />
             <button onClick={sendDataToWall}>Send</button>
         </div>
     );

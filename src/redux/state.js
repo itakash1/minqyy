@@ -14,7 +14,6 @@ let store = {
             ],
             newText: 'hello world!',
         },
-
         dialogs: {
             listUsers: [
                 {id: 1, name: "Андрюха Лупатый", avatar: avatar1,},
@@ -61,9 +60,13 @@ let store = {
     getState() {
         return this._state
     },
-    subscribe(observer) {
-        renderTree = observer
-    },
+
+
+    // subscribe(observer) {
+    //     if (renderTree.type === 'OBS'){
+    //         renderTree = observer
+    //     }
+    // },
 }
 
 export default store;
