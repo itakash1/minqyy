@@ -61,7 +61,7 @@ let store = {
     getState() {
         return this._state
     },
-    subscribe (observer) {
+    subscribe(observer) {
         renderTree = observer
     },
 }
