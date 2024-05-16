@@ -5,11 +5,14 @@ export default function UserInput(props) {
 
     let sendDataToWall = () => {
         let text = newElement.current.value;
+        props.dispatch({type: 'ADD-POST'});
         props.addPost(text)
     }
 
     let test = () => {
-        props.changeNewText(newElement.current.value);
+        /*props.changeNewText(newElement.current.value);*/
+        let text = newElement.current.value
+        props.dispatch({type: 'CHANGE-NEW-TEXT', newText: {text}})
     }
 
     let newElement = React.createRef();

@@ -3,14 +3,13 @@ import Post from "./Post/Post";
 import UserInput from "./UserInput/UserInput";
 
 export default function UserPosts(props) {
-
-    let userPostWall = props.state.post.map((el) => {
+    let userPostWall = props.state.profile.post.map((el) => {
         return <Post avatar={el.avatar} text={el.text} likes={el.likes}/>
     })
 
     return (
         <div className={css.wall__post__void}>
-            <UserInput newText={props.state.newText} addPost={props.addPost} changeNewText={props.changeNewText}/>
+            <UserInput newText={props.state.newText} dispatch={props.dispatch}/>
             { userPostWall }
         </div>
     );
