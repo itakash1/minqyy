@@ -1,15 +1,12 @@
 import css from './UserInput.module.css'
 import React from 'react'
+import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/state";
 
 export default function UserInput(props) {
-
-    let sendDataToWall = () => {
-        props.dispatch({type: 'ADD-POST'});
-    }
-
     let test = () => {
         let text = newElement.current.value
-        props.dispatch({type: 'CHANGE-NEW-TEXT', newText: text})
+        props.dispatch(updateNewPostCreator(text))
+        console.log(text)
     }
 
     let newElement = React.createRef();

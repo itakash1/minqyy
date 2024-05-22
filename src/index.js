@@ -15,4 +15,3 @@ export let renderTree = () => {
 }
 
 renderTree();
-// store.subscribe({type: 'OBS'});

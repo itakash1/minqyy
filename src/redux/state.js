@@ -41,7 +41,7 @@ let store = {
             ],
         },
     },
-    dispatch(action){
+     dispatch(action){
         if(action.type === 'ADD-POST'){
             let newPost = {
                 id: 5,
@@ -68,5 +68,14 @@ let store = {
     //     }
     // },
 }
+
+
+export const sendDataToWall = () => {
+    return { type: 'ADD-POST' }
+};
+
+export const updateNewPostCreator = (text) => {
+    return { type: "CHANGE-NEW-TEXT", newText: text }
+};
 
 export default store;
