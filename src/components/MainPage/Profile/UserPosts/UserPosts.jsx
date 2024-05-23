@@ -3,8 +3,8 @@ import Post from "./Post/Post";
 import UserInput from "./UserInput/UserInput";
 
 export default function UserPosts(props) {
-    let userPostWall = props.state.profile.post.map((el) => {
-        return <Post avatar={el.avatar} text={el.text} likes={el.likes}/>
+    let userPostWall = props.state.profile.post.map((ele) => {
+        return <Post avatar={ele.avatar} text={ele.text} likes={ele.likes}/>
     })
 
     return (

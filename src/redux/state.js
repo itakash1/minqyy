@@ -2,8 +2,6 @@ import avatar from "../assets/avatar.jpeg";
 import avatar1 from "../assets/user-avatar.png"
 import {renderTree} from "../index";
 
-
-
 let store = {
     _state: {
         profile: {
@@ -11,6 +9,8 @@ let store = {
                 {id: 1, avatar: avatar, text: 'Im so lazy... But im gtg teach React!', likes: 12,},
                 {id: 2, avatar: avatar, text: '"cya" - Its one of the way variants say goodbye in English language', likes: 2,},
                 {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
+                {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
+
             ],
             newText: 'hello world!',
         },
@@ -47,7 +47,7 @@ let store = {
                 id: 5,
                 avatar: avatar,
                 text: this._state.profile.newText,
-                likes: 5,
+                likes: 0,
             };
             this._state.profile.post.push(newPost);
             this._state.profile.newText = ''
@@ -60,22 +60,14 @@ let store = {
     getState() {
         return this._state
     },
-
-
-    // subscribe(observer) {
-    //     if (renderTree.type === 'OBS'){
-    //         renderTree = observer
-    //     }
-    // },
 }
 
-
 export const sendDataToWall = () => {
-    return { type: 'ADD-POST' }
+    return { type: 'ADD-POST'}
 };
 
 export const updateNewPostCreator = (text) => {
-    return { type: "CHANGE-NEW-TEXT", newText: text }
+    return { type: 'CHANGE-NEW-TEXT', newText: text }
 };
 
 export default store;
