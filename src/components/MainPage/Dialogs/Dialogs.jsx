@@ -25,7 +25,7 @@ export default function Dialogs(props) {
 
                 <div className={css.dialog_free_void}></div>
 
-                <InputMsg />
+                <InputMsg state={props.state} dispatch={props.dispatch}/>
             </div>
         </div>
     );
