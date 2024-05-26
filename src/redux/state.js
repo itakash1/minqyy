@@ -1,10 +1,8 @@
 import avatar from "../assets/avatar.jpeg";
 import avatar1 from "../assets/user-avatar.png"
 import {renderTree} from "../index";
-
-
-const commandAddPost = 'ADD-POST';
-const commandPostCreator = 'CHANGE-NEW-TEXT';
+import {ProfileReducer} from "./profile-reducer";
+import {DialogsReducer} from "./dialogs-reducer";
 
 let store = {
     _state: {
@@ -14,7 +12,6 @@ let store = {
                 {id: 2, avatar: avatar, text: '"cya" - Its one of the way variants say goodbye in English language', likes: 2,},
                 {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
                 {id: 3, avatar: avatar, text: 'oink-oink', likes: 66,},
-
             ],
             newText: 'hello world!',
         },
@@ -35,40 +32,13 @@ let store = {
         },
     },
      dispatch(action){
-        if(action.type === commandAddPost){
-            let newPost = {
-                id: 5,
-                avatar: avatar,
-                text: this._state.profile.newText,
-                likes: 0,
-            };
-            this._state.profile.post.push(newPost);
-            this._state.profile.newText = ''
-            renderTree(this._state);
-        } else if(action.type === commandPostCreator){
-            this._state.profile.newText = action.newText
-            renderTree(this._state);
-        } else if(action.type === 'NEW-MSG'){
-            let newMsg = {id: 5, msg: this._state.dialogs.newDialogMsg};
-            this._state.dialogs.dialogsData.push(newMsg)
-            this._state.dialogs.newDialogMsg = ''
-            renderTree(this._state);
-        } else if(action.type === 'CHECK-NEW-MSG'){
-            this._state.dialogs.newDialogMsg = action.newMsg;
-            renderTree(this._state);
-        }
+        this._state.profile = ProfileReducer(this._state.profile, action);
+        this._state.dialogs = DialogsReducer(this._state.dialogs, action);
+        renderTree();
     },
     getState() {
         return this._state
     },
 }
-
-export const sendDataToWall = () => {
-    return { type: commandAddPost}
-};
-
-export const updateNewPostCreator = (text) => {
-    return { type: commandPostCreator, newText: text }
-};
 
 export default store;

@@ -1,6 +1,6 @@
 import css from './UserInput.module.css'
 import React from 'react'
-import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/state";
+import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/profile-reducer";
 
 export default function UserInput(props) {
     let addPost = () => {

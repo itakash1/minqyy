@@ -1,16 +1,16 @@
 import css from "./InputMsg.module.css";
 import React from 'react'
-import {updateNewPostCreator} from "../../../../redux/state";
+import {sendMsg, updateNewMsg} from "../../../../redux/dialogs-reducer";
 
 export default function InputMsg(props) {
     let Test = () => {
-        let action = { type: 'NEW-MSG' }
+        let action = sendMsg()
         props.dispatch(action);
     }
 
     let onChangeMark = () => {
         let text = newElement.current.value;
-        props.dispatch({type: 'CHECK-NEW-MSG', newMsg: text });
+        props.dispatch(updateNewMsg(text));
     }
     let newElement = React.createRef();
     return (
