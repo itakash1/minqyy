@@ -6,11 +6,11 @@ import InputMsg from "./InputMsg/InputMsg";
 export default function Dialogs(props) {
 
 
-    let dialogsEl = props.state.listUsers.map((dialog) => {
+    let dialogsEl = props.store.listUsers.map((dialog) => {
         return <Users name={dialog.name} avatar={dialog.avatar} id={dialog.id} />
     })
 
-    let listUserMsg = props.state.dialogsData.map(item => {
+    let listUserMsg = props.store.dialogsData.map(item => {
         return <Messagease msg={item.msg}/>
     })
 
@@ -25,7 +25,7 @@ export default function Dialogs(props) {
 
                 <div className={css.dialog_free_void}></div>
 
-                <InputMsg state={props.state} dispatch={props.dispatch}/>
+                <InputMsg store={props.store} dispatch={props.dispatch}/>
             </div>
         </div>
     );

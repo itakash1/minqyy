@@ -20,7 +20,8 @@ export default function Profile(props) {
                     </div>
                 </div>
             </div>
-            <UserPosts state={props.state} dispatch={props.dispatch}/>
+
+            <UserPosts store={props.store} dispatch={props.dispatch}/>
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function InputMsg(props) {
     return (
         <div className={css.dialog_input_void}>
             <div className={css.chat_input}>
-                <textarea ref={newElement} value={props.state.newDialogMsg} onChange={onChangeMark}></textarea>
+                <textarea ref={newElement} value={props.store.newDialogMsg} onChange={onChangeMark}></textarea>
                 <button onClick={Test}>Send</button>
             </div>
         </div>

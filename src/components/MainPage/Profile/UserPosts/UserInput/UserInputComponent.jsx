@@ -1,9 +1,10 @@
 import React from 'react'
 import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/profile-reducer";
 import UserInput from "./UserInput";
-import state from "../../../../../redux/state";
 
 export default function UserInputComponent(props) {
+    let state = props.store
+
     let addPost = () => {
         let action = sendDataToWall()
         props.dispatch(action)
@@ -15,6 +16,6 @@ export default function UserInputComponent(props) {
     }
 
     return (
-        <UserInput value={props.state.profile.newText} addPost={addPost} onPostChange={onPostChange} />
+        <UserInput store={state} addPost={addPost} onPostChange={onPostChange} />
     );
 }

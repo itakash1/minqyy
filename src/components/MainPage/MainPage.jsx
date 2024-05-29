@@ -12,8 +12,8 @@ export default function MainPage(props) {
             <Navbar/>
 
             <Routes>
-                <Route path="/profile" element={<Profile state={props.state} dispatch={props.dispatch}/>}/>
-                <Route path="/dialogs/*" element={<Dialogs state={props.state.dialogs} dispatch={props.dispatch}/>}/>
+                <Route path="/profile" element={<Profile store={props.store} dispatch={props.dispatch}/>}/>
+                <Route path="/dialogs/*" element={<Dialogs store={props.store.dialogs} dispatch={props.dispatch}/>}/>
                 <Route path="/music" element={<Music/>}/>
                 <Route path="/news" element={<News/>}/>
             </Routes>
