@@ -1,6 +1,6 @@
 import css from "./UserPosts.module.css";
 import Post from "./Post/Post";
-import UserInput from "./UserInput/UserInput";
+import UserInputComponent from "./UserInput/UserInputComponent";
 
 export default function UserPosts(props) {
     let userPostWall = props.state.profile.post.map((ele) => {
@@ -9,7 +9,7 @@ export default function UserPosts(props) {
 
     return (
         <div className={css.wall__post__void}>
-            <UserInput newText={props.state} dispatch={props.dispatch}/>
+            <UserInputComponent state={props.state} newText={props.state} dispatch={props.dispatch}/>
             { userPostWall }
         </div>
     );

@@ -1,22 +1,19 @@
 import css from './UserInput.module.css'
 import React from 'react'
-import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/profile-reducer";
 
 export default function UserInput(props) {
     let addPost = () => {
-        let action = sendDataToWall()
-        props.dispatch(action)
+        props.addPost();
     }
 
     let onPostChange = () => {
         let text = newElement.current.value
-        let action = updateNewPostCreator(text)
-        props.dispatch(action)
+        props.onPostChange(text);
     }
     let newElement = React.createRef();
     return (
         <div className={css.input__void}>
-            <textarea ref={newElement} placeholder="What do u think about z1trxks?" value={props.newText.profile.newText} onChange={onPostChange} />
+            <textarea ref={newElement} placeholder="What do u think about z1trxks?" value={props.value} onChange={onPostChange} />
             <button onClick={addPost}>Send</button>
         </div>
     );
