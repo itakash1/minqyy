@@ -9,7 +9,6 @@ export default function UserInput(props) {
     }
 
     let onPostChange = () => {
-        console.log(props.newText.profile.newText)
         let text = newElement.current.value
         let action = updateNewPostCreator(text)
         props.dispatch(action)

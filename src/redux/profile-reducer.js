@@ -15,7 +15,6 @@ let initialState = {
 };
 
 export const ProfileReducer = (state = initialState, action) => {
-    console.log(state.newText)
     if(action.type === commandAddPost){
         let newPost = {
             id: 5,
