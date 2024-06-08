@@ -15,19 +15,21 @@ let initialState = {
 };
 
 export const ProfileReducer = (state = initialState, action) => {
-    if(action.type === commandAddPost){
-        let newPost = {
-            id: 5,
-            avatar: avatar,
-            text: state.newText,
-            likes: 0,
-        };
-        state.post.push(newPost);
-        state.newText = ''
-    } else if(action.type === commandPostCreator){
-        state.newText = action.newText
-    }
-    return state;
+        let stateCopy = {...state}
+        if(action.type === commandAddPost){
+            let newPost = {
+                id: 5,
+                avatar: avatar,
+                text: state.newText,
+                likes: 0,
+            };
+            stateCopy.post = [...state.post]
+            stateCopy.post.push(newPost);
+            stateCopy.newText = ''
+        } else if(action.type === commandPostCreator){
+            stateCopy.newText = action.newText
+        }
+        return stateCopy;
 }
 
 export const sendDataToWall = () => {

@@ -21,7 +21,7 @@ export default function Profile(props) {
                 </div>
             </div>
 
-            <UserPosts store={props.store} dispatch={props.dispatch}/>
+            <UserPosts />
         </div>
     );
 }

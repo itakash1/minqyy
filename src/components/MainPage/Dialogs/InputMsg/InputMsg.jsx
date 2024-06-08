@@ -5,12 +5,12 @@ import {sendMsg, updateNewMsg} from "../../../../redux/dialogs-reducer";
 export default function InputMsg(props) {
     let Test = () => {
         let action = sendMsg()
-        props.dispatch(action);
+        props.store.dispatch(action);
     }
 
     let onChangeMark = () => {
         let text = newElement.current.value;
-        props.dispatch(updateNewMsg(text));
+        props.store.dispatch(updateNewMsg(text));
     }
     let newElement = React.createRef();
     return (

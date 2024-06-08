@@ -4,29 +4,28 @@ import Messagease from "./Messagease/Messagease";
 import InputMsg from "./InputMsg/InputMsg";
 
 export default function Dialogs(props) {
+    let state = props.getState();
 
-
-    let dialogsEl = props.store.listUsers.map((dialog) => {
+    let dialogsEl = state.dialogs.listUsers.map((dialog) => {
         return <Users name={dialog.name} avatar={dialog.avatar} id={dialog.id} />
     })
 
-    let listUserMsg = props.store.dialogsData.map(item => {
+    let listUserMsg = state.dialogs.dialogsData.map(item => {
         return <Messagease msg={item.msg}/>
     })
 
-
-    return (
+    return(
         <div className={css.dialogs}>
             <div className={css.dialogs_users_nav}>
-                { dialogsEl }
+                {dialogsEl}
             </div>
             <div className={css.dialog_chat_void}>
-                { listUserMsg}
+                {listUserMsg}
 
                 <div className={css.dialog_free_void}></div>
 
-                <InputMsg store={props.store} dispatch={props.dispatch}/>
+                <InputMsg store={store} />
             </div>
         </div>
-    );
+    )
 }

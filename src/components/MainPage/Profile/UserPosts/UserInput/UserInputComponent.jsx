@@ -1,21 +1,25 @@
 import React from 'react'
 import {sendDataToWall, updateNewPostCreator} from "../../../../../redux/profile-reducer";
 import UserInput from "./UserInput";
+import {connect} from "react-redux";
 
-export default function UserInputComponent(props) {
-    let state = props.store
-
-    let addPost = () => {
-        let action = sendDataToWall()
-        props.dispatch(action)
+const mapStateToProps = (state) => {
+    return {
+    store: state,
     }
+};
 
-    let onPostChange = (text) => {
-        let action = updateNewPostCreator(text)
-        props.dispatch(action)
+const mapDispatchToProps = (dispatch)=> {
+    return {
+        addPost: () => {
+            dispatch(sendDataToWall())
+        },
+        onPostChange: (text) => {
+            dispatch(updateNewPostCreator(text))
+        },
     }
+};
 
-    return (
-        <UserInput store={state} addPost={addPost} onPostChange={onPostChange} />
-    );
-}
+const UserInputComponent = connect(mapStateToProps, mapDispatchToProps)(UserInput)
+
+export default UserInputComponent

@@ -2,7 +2,9 @@ import css from './UserInput.module.css'
 import React from 'react'
 
 export default function UserInput(props) {
+    console.log(props)
     let addPost = () => {
+        console.log(props)
         props.addPost();
     }
 
