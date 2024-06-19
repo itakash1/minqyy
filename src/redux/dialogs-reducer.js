@@ -19,14 +19,16 @@ let initialDialog = {
     newDialogMsg: "",
 }
 export const DialogsReducer = (state = initialDialog, action) => {
+    let stateCopy = {...state};
     if(action.type === newMsg){
         let newMsg = {id: 5, msg: state.newDialogMsg};
-        state.dialogsData.push(newMsg)
-        state.newDialogMsg = ''
+        stateCopy.dialogsData = [...state.dialogsData];
+        stateCopy.dialogsData.push(newMsg)
+        stateCopy.newDialogMsg = ''
     } else if(action.type === checkNewMsg){
-        state.newDialogMsg = action.newMsg;
+        stateCopy.newDialogMsg = action.newMsg;
     }
-    return state;
+    return stateCopy;
 }
 
 export const sendMsg = () => {

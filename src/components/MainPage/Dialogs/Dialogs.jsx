@@ -1,16 +1,15 @@
 import css from './Dialogs.module.css';
 import Users from "./Users/Users";
 import Messagease from "./Messagease/Messagease";
-import InputMsg from "./InputMsg/InputMsg";
+import InputMsgComponent from "./InputMsg/InputMsgComponent";
+import {connect} from "react-redux";
 
-export default function Dialogs(props) {
-    let state = props.getState();
-
-    let dialogsEl = state.dialogs.listUsers.map((dialog) => {
+function DialogsComp(props) {
+    let dialogsEl = props.state.dialogs.listUsers.map((dialog) => {
         return <Users name={dialog.name} avatar={dialog.avatar} id={dialog.id} />
     })
 
-    let listUserMsg = state.dialogs.dialogsData.map(item => {
+    let listUserMsg = props.state.dialogs.dialogsData.map(item => {
         return <Messagease msg={item.msg}/>
     })
 
@@ -24,8 +23,17 @@ export default function Dialogs(props) {
 
                 <div className={css.dialog_free_void}></div>
 
-                <InputMsg store={store} />
+                <InputMsgComponent  />
             </div>
         </div>
     )
 }
+
+const mapStateToProps = state => {
+    return{
+        state: state,
+    }
+}
+
+const Dialogs = connect(mapStateToProps)(DialogsComp);
+export default Dialogs;
