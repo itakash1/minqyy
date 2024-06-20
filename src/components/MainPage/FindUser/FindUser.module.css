@@ -1,0 +1,82 @@
+.blockFind{
+    gap: 1rem;
+    margin: 1rem auto;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+}
+
+.user{
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 100px;
+    background-color: white;
+}
+
+.avatar img{
+    margin-left: 1rem;
+    padding: 5px;
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.user_info{
+    display: flex;
+    flex-direction: column;
+}
+.nameUser{
+
+}
+.nameUser p{
+    color: black;
+    font-size: 2rem;
+}
+
+.place{
+
+}
+
+.place p{
+    color: black;
+    font-size: 1.3rem;
+}
+
+.add_user{
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    background-color: darkgray;
+    border-radius: 0.8rem;
+    transition: all 0.2s;
+}
+
+.add_user p{
+    font-size: 1.3rem;
+    color: black;
+}
+
+.add_user:hover{
+    background-color: lightgray;
+    transition: all 0.2s;
+}
+
+.push{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.updateNewUsers{
+    padding: 1rem;
+    width: 250px;
+    background-color: darkgray;
+    border-radius: 3rem;
+}
+
+.updateNewUsers p{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+}
