@@ -1,11 +1,11 @@
 import Navbar from "./Navbar/Navbar";
 import Dialogs from "./Dialogs/Dialogs";
+import FindUser from "./FindUser/FindUser";
 import Profile from "./Profile/Profile";
 import Music from "./Music/Music"
 import News from "./News/News"
 import {Route, Routes} from "react-router-dom";
 import css from './MainPage.module.css'
-import FindUser from "./FindUser/FindUser";
 
 export default function MainPage(props) {
     return (

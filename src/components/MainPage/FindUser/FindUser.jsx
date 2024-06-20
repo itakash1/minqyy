@@ -1,30 +1,29 @@
 import css from "./FindUser.module.css";
-import avatarka from "../../../assets/avatar.jpeg"
-export default function FindUser(props) {
+import User from "./User/User";
+import {connect} from "react-redux";
+
+function FindUser1(props) {
+    console.log(props.store)
+    let userToListOnWall = props.store.finduser.user.map((ele) => {
+        return <User avatar={ele.avatar} name={ele.name} place={ele.place}/>
+    })
 
     return (
         <div className={css.blockFind}>
-            <div>
-                <div className={css.user}>
-                    <div className={css.avatar}>
-                        <img src={avatarka} alt="none"/>
-                    </div>
-                    <div className={css.user_info}>
-                        <div className={css.nameUser}>
-                            <p>Александр Невский</p>
-                        </div>
-                        <div className={css.place}>
-                            <p>Samara</p>
-                        </div>
-                    </div>
-                    <div className={`${css.add_user} ${css.push}`}>
-                        <p>Add in friend</p>
-                    </div>
-                </div>
-            </div>
+            { userToListOnWall }
+
             <div className={css.updateNewUsers}>
                 <p>Update</p>
             </div>
         </div>
     )
 }
+
+const mapStateToProps = (state) => {
+    return{
+        store: state,
+    }
+}
+
+const FindUser = connect(mapStateToProps)(FindUser1);
+export default FindUser;
