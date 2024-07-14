@@ -3,9 +3,9 @@ import avatar from "../assets/avatar.jpeg";
 // eslint-disable-next-line no-unused-vars
 let initialState = {
     user:[
-        {id: 1, avatar: avatar, name: 'Александр Невский', place: 'Samara'},
-        {id: 2, avatar: avatar, name: 'Евгений Носов', place: 'Samara'},
-        {id: 3, avatar: avatar, name: 'Алина Воронова', place: 'Samara'},
+        {id: 1, followed: true, name: 'Александр Невский', avatar: avatar, place: 'Samara'},
+        {id: 2, followed: true, name: 'Евгений Носов', avatar: avatar, place: 'Samara'},
+        {id: 3, followed: false, name: 'Алина Воронова', avatar: avatar, place: 'Samara'},
     ]}
 
 

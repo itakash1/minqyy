@@ -1,5 +1,13 @@
 import css from "./User.module.css";
 
+function Followed(props) {
+    if(props.followed === false){
+        return <p>Add in friend</p>
+    } else{
+        return <p>You are friend</p>
+    }
+}
+
 export default function User(props) {
     return (
             <div>
@@ -16,7 +24,7 @@ export default function User(props) {
                         </div>
                     </div>
                     <div className={`${css.add_user} ${css.push}`}>
-                        <p>Add in friend</p>
+                        <Followed followed={props.followed}/>
                     </div>
                 </div>
             </div>

@@ -3,9 +3,8 @@ import User from "./User/User";
 import {connect} from "react-redux";
 
 function FindUser1(props) {
-    console.log(props.store)
     let userToListOnWall = props.store.finduser.user.map((ele) => {
-        return <User avatar={ele.avatar} name={ele.name} place={ele.place}/>
+        return <User followed={ele.followed} avatar={ele.avatar} name={ele.name} place={ele.place}/>
     })
 
     return (
