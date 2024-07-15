@@ -1,11 +1,11 @@
 import Navbar from "./Navbar/Navbar";
 import Dialogs from "./Dialogs/Dialogs";
-import FindUser from "./FindUser/FindUser";
 import Profile from "./Profile/Profile";
 import Music from "./Music/Music"
 import News from "./News/News"
 import {Route, Routes} from "react-router-dom";
 import css from './MainPage.module.css'
+import FindUserComponent from "./FindUser/FindUserComponent";
 
 export default function MainPage(props) {
     return (
@@ -17,7 +17,7 @@ export default function MainPage(props) {
                 <Route path="/dialogs/*" element={<Dialogs />}/>
                 <Route path="/music" element={<Music/>}/>
                 <Route path="/news" element={<News/>}/>
-                <Route path="/find_user" element={<FindUser/>}/>
+                <Route path="/find_user" element={<FindUserComponent/>}/>
             </Routes>
         </main>
     )

@@ -1,8 +1,8 @@
 import avatar from "../assets/avatar.jpeg";
 
 const FOLLOW = 'FOLLOW'
-const UNFOLLOW = 'unfollow'
-const SET_USERS = 'set_users'
+const UNFOLLOW = 'UNFOLLOW'
+const SET_USERS = 'SET_USERS'
 
 // eslint-disable-next-line no-unused-vars
 let initialState = {
@@ -41,11 +41,11 @@ export const UserReducer = (state = initialState, action) => {
 }
 
 export const followAC = (userID) => {
-    return { type: FOLLOW, userID }
+    return { type: FOLLOW, userID: userID }
 };
 
 export const unfollowAC = (userID) => {
-    return { type: UNFOLLOW, userID}
+    return { type: UNFOLLOW, userID: userID}
 };
 
 export const setUsersAC = (user) => {

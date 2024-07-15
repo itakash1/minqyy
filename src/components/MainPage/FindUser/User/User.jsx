@@ -1,14 +1,9 @@
 import css from "./User.module.css";
-import {followAC, unfollowAC} from "../../../../redux/user-reducer";
 
-function Followed(props) {
-    // if(props.followed === false){
-    //     return <p>Add in friend</p>
-    // } else{
-    //     return <p>You are friend</p>
-    // }
-    return props.followed ? <button onClick={() => followAC(props.id)}>Unfollow</button> :
-        <button onClick={() => unfollowAC(props.id)}>Follow</button>
+export function Followed(props) {
+    console.log(props)
+    return props.followed ? <button onClick={() => props.upFl(props.id)}>Unfollow</button> :
+        <button onClick={() => props.upFl(props.id)}>Follow</button>
 }
 
 export default function User(props) {
@@ -27,7 +22,7 @@ export default function User(props) {
                         </div>
                     </div>
                     <div className={`${css.add_user} ${css.push}`}>
-                        <Followed followed={props.followed} id={props.id}/>
+                        {<Followed followed={props.followed} id={props.id} upFl={props.upFl}/>}
                     </div>
                 </div>
             </div>
