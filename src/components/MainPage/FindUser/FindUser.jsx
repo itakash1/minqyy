@@ -1,10 +1,11 @@
 import css from "./FindUser.module.css";
 import User from "./User/User";
 import {connect} from "react-redux";
+import {followAC, setUsersAC, unfollowAC} from "../../../redux/user-reducer";
 
 function FindUser1(props) {
-    let userToListOnWall = props.store.finduser.user.map((ele) => {
-        return <User followed={ele.followed} avatar={ele.avatar} name={ele.name} place={ele.place}/>
+    let userToListOnWall = props.user.map((ele) => {
+        return <User id={ele.id} followed={ele.followed} avatar={ele.avatar} name={ele.name} place={ele.place}/>
     })
 
     return (
@@ -20,7 +21,21 @@ function FindUser1(props) {
 
 const mapStateToProps = (state) => {
     return{
-        store: state,
+        user: state.finduser.user,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        follow: (userId) => {
+            dispatch(followAC(userId))
+        },
+        unfollow: (userId) => {
+            dispatch(unfollowAC(userId))
+        },
+        set_users: (users) => {
+            dispatch(setUsersAC(users))
+        }
     }
 }
 

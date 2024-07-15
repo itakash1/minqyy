@@ -49,6 +49,10 @@
     color: black;
 }
 
+.add_user button {
+    background-color: rgb(240, 240, 240, 0);
+}
+
 .add_user:hover{
     background-color: lightgray;
     transition: all 0.2s;
