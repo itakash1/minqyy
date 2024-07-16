@@ -4,10 +4,9 @@ import css from "./FindUser.module.css";
 import User from "./User/User";
 
 export function FindUser(props) {
-    const upFl = (id) => props.followw(id);
-
+    console.log(props.state.finduser.user)
     let userToListOnWall = props.state.finduser.user.map((ele) => {
-        return <User id={ele.id} followed={ele.followed} avatar={ele.avatar} name={ele.name} place={ele.place} upFl={upFl}/>
+        return <User id={ele.id} followed={ele.followed} avatar={ele.avatar} name={ele.name} place={ele.place} test={props}/>
     })
     return (
         <div className={css.blockFind}>
@@ -28,10 +27,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        followw: (userId) => {
+        followbt: (userId) => {
             dispatch(followAC(userId))
         },
-        unfollow: (userId) => {
+        unfollowbt: (userId) => {
             dispatch(unfollowAC(userId))
         },
         set_users: (users) => {

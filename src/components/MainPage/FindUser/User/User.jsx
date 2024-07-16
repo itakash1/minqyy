@@ -1,9 +1,8 @@
 import css from "./User.module.css";
 
 export function Followed(props) {
-    console.log(props)
-    return props.followed ? <button onClick={() => props.upFl(props.id)}>Unfollow</button> :
-        <button onClick={() => props.upFl(props.id)}>Follow</button>
+    return props.followed ? <button onClick={() => props.test.followbt(props.id)}>Unfollow</button> :
+        <button onClick={() => props.test.unfollowbt(props.id)}>Follow</button>
 }
 
 export default function User(props) {
@@ -14,7 +13,7 @@ export default function User(props) {
                         <img src={props.avatar} alt="none"/>
                     </div>
                     <div className={css.user_info}>
-                        <div className={css.nameUser}>
+                        <div className={css.nameUser}>b
                             <p>{props.name}</p>
                         </div>
                         <div className={css.place}>
@@ -22,7 +21,7 @@ export default function User(props) {
                         </div>
                     </div>
                     <div className={`${css.add_user} ${css.push}`}>
-                        {<Followed followed={props.followed} id={props.id} upFl={props.upFl}/>}
+                        {<Followed followed={props.followed} id={props.id} test={props.test}/>}
                     </div>
                 </div>
             </div>

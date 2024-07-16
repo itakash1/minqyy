@@ -15,9 +15,10 @@ let initialState = {
 
 export const UserReducer = (state = initialState, action) => {
     switch(action.type){
+        //error tut
         case FOLLOW:
             return{
-                ...state, users: state.user.map( user => {
+                ...state, user: state.user.map( user => {
                     if(user.id === action.userID){
                         return {...user, followed: true}
                     }
@@ -26,7 +27,7 @@ export const UserReducer = (state = initialState, action) => {
             }
         case UNFOLLOW:
             return {
-                ...state, users: state.users.map( user => {
+                ...state, user: state.users.map( user => {
                     if(user.id === action.userID){
                         return {...user, followed: false}
                     }
