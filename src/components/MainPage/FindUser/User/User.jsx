@@ -1,11 +1,12 @@
 import css from "./User.module.css";
 
 export function Followed(props) {
-    return props.followed ? <button onClick={() => props.test.followbt(props.id)}>Unfollow</button> :
-        <button onClick={() => props.test.unfollowbt(props.id)}>Follow</button>
+    console.log(props.state)
+    return props.followed ? <button onClick={() => props.state.followAC1(props.id)}>Unfollow</button> :
+        <button onClick={() => props.state.unfollowAC1(props.id)}>Follow</button>
 }
 
-export default function User(props) {
+export function User(props) {
     return (
             <div>
                 <div className={css.user}>
@@ -21,7 +22,7 @@ export default function User(props) {
                         </div>
                     </div>
                     <div className={`${css.add_user} ${css.push}`}>
-                        {<Followed followed={props.followed} id={props.id} test={props.test}/>}
+                        {<Followed followed={props.followed} id={props.id} state={props.state}/>}
                     </div>
                 </div>
             </div>
