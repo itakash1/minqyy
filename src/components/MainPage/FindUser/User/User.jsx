@@ -1,7 +1,6 @@
 import css from "./User.module.css";
 
 export function Followed(props) {
-    console.log(props.state)
     return props.followed ? <button onClick={() => props.state.followAC1(props.id)}>Unfollow</button> :
         <button onClick={() => props.state.unfollowAC1(props.id)}>Follow</button>
 }

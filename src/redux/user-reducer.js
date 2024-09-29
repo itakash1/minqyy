@@ -1,21 +1,22 @@
 import avatar from "../assets/avatar.jpeg";
 
+
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET_USERS'
 
 // eslint-disable-next-line no-unused-vars
+
 let initialState = {
     user:[
-        {id: 1, followed: true, name: 'Александр Невский', avatar: avatar, place: 'Samara'},
-        {id: 2, followed: true, name: 'Евгений Носов', avatar: avatar, place: 'Samara'},
-        {id: 3, followed: false, name: 'Алина Воронова', avatar: avatar, place: 'Samara'},
+        // {id: 1, followed: true, name: 'Александр Невский', avatar: avatar, place: 'Samara'},
+        // {id: 2, followed: true, name: 'Евгений Носов', avatar: avatar, place: 'Samara'},
+        // {id: 3, followed: false, name: 'Алина Воронова', avatar: avatar, place: 'Samara'},
     ]}
 
 
 export const UserReducer = (state = initialState, action) => {
     switch(action.type){
-        //error tut
         case FOLLOW:
             return {
                 ...state, user: state.user.map( user => {
@@ -35,7 +36,7 @@ export const UserReducer = (state = initialState, action) => {
                 })
             }
         case SET_USERS:
-            return {...state, users: [...state.users, ...action.user]};
+            return {...state, user: [...state.user, ...action.user]};
         default:
             return state;
     }

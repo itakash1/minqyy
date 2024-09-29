@@ -11,11 +11,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return{
         followAC1: (userID) => {
-            console.log('tut +')
             dispatch(followAC(userID))
         },
         unfollowAC1: (userID) => {
-            console.log('tut -')
             dispatch(unfollowAC(userID))
         },
         set_users: (users) => {
