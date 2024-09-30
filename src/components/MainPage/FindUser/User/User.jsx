@@ -17,7 +17,7 @@ export function User(props) {
                             <p>{props.name}</p>
                         </div>
                         <div className={css.place}>
-                            <p>{props.place}</p>
+                            <p>{props.place ? props.place : 'none' }</p>
                         </div>
                     </div>
                     <div className={`${css.add_user} ${css.push}`}>

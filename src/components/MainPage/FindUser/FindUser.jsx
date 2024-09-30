@@ -3,11 +3,14 @@ import {User} from "./User/User";
 import axios from "axios";
 
 export function FindUser(props) {
-    console.log(props)
+    console.log(props.state.finduser.user)
 
     axios.get("https://social-network.samuraijs.com/api/1.0/users")
         .then((response) => {
-            props.set_users(response.data.items);
+                const dataAx = response.data.items
+                if(props.state.finduser.user.length < 10){
+                    props.set_users(dataAx);
+                }
         });
 
 
