@@ -1,12 +1,14 @@
 .wall__post__void{
+    width: 90%;
     border-top: rgb(254, 140, 242) solid 1px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     overflow-y: scroll;
 }
 
 .wall__post__void::-webkit-scrollbar {
-    width: 10px; /* Ширина всего элемента навигации */
+    width: 5px; /* Ширина всего элемента навигации */
 }
 
 .wall__post__void::-webkit-scrollbar-track {

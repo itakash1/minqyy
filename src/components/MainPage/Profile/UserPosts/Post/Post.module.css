@@ -5,7 +5,7 @@
     border: rgb(254, 140, 242) solid 2px;
     border-radius: 15px;
     min-height: 100px;
-    width: 800px;
+    width: 100%;
     margin: 1rem auto;
     gap: 5rem;
 }
