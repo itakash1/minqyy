@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
-import {FindUser} from "./FindUser";
 import {followAC, setUsersAC, unfollowAC} from "../../../redux/user-reducer";
+import FindUser from "./FindUser";
 
 const mapStateToProps = (state) => {
     return{
