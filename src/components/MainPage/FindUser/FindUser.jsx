@@ -4,13 +4,13 @@ import axios from "axios";
 
 export function FindUser(props) {
 
-    axios.get("https://social-network.samuraijs.com/api/1.0/users")
-        .then((response) => {
+    let getUsers = () => {
+        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+            .then((response) => {
                 const dataAx = response.data.items
-                if( props.state.finduser.user.length < 10 ){
-                    props.set_users(dataAx);
-                }
-        });
+                props.set_users(dataAx);
+            });
+    }
 
 
     let userToListOnWall = props.state.finduser.user.map((ele) => {
@@ -21,9 +21,9 @@ export function FindUser(props) {
         <div className={css.blockFind}>
             { userToListOnWall }
 
-            <div className={css.updateNewUsers}>
+            <button className={css.updateNewUsers} onClick={getUsers}>
                 <p>Update</p>
-            </div>
+            </button>
         </div>
     )
 }

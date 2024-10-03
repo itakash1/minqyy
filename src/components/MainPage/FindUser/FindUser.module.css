@@ -1,9 +1,13 @@
 .blockFind{
     gap: 1rem;
-    margin: 1rem auto;
+    margin: 10px 50px 20px;
     flex-flow: column;
     display: flex;
     align-items: center;
+}
+
+.blockFind div{
+    max-width: 90%;
 }
 
 .updateNewUsers{
